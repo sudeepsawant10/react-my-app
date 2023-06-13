@@ -1,0 +1,64 @@
+/*
+- React lifecycle methods cannot be used in functional component eg. componenetDidMount cannot be used in functional components
+- .js or .jsx both are valid for functional component
+- no render method used in functional coponents
+- functional component can accept and use props
+- for ui design or presentation
+eg. funcation App(){
+  return ();
+}
+
+class component:
+- make use of es6 classes and extend the component class in React
+- sometimes called 'start' or 'stateful' components as they tend to implement logic and state
+- React lifecycle methods can be used inside class component 
+- you can pass props down to class components and access them with this.props
+we cannot import class component like this
+import { Header } from './components/Header';
+
+Hooks are js functions, but they impose two additional rules:
+1. only call Hooks at the top level.
+- Don't call Hooks inside loops, conditions or nested functions
+
+2. Only call Hooks from React function components.
+  - Don't call Hooks from regular js functions.
+  (There is just one other valid place to call Hooks - Your own custom Hoooksl)
+
+PROPS:
+- to send the values to components from component calling tag
+- we cannot change the value of props in component once it is set
+- Don't need to receive props in class component(we use this.props)
+- props are immutable
+
+STATE:
+- state is managed with in the component
+- State can be changed
+- UseState Hook -> Functional component
+- this.state -> class component
+
+Event Handling - Pranthesis:
+- while defining onClick function it should be function not a function call using paranthesis
+- if we do so it will call function before the event
+
+- cannot access this in function present in function component
+
+HANDLING THIS AND BIND:
+- we cannot use function keyword in class component
+- if we use arrow function we don't need to bind this we can use it automatically
+
+END OF EVENT HANDLING - PREVENT DEFAULT BEHAVIOR
+- accessing props in state in class component
+- when passing props to class component you have to receive it using constructor and call super(props)
+
+FRAGMENT IN REACT
+- takes jsx wrap in single element
+- why fragment = to avoid unnecessary div tag
+- fragment is used to group multiple element without using div
+return(
+  <React.Fragment>
+  <h1></h1>
+  <div></div>
+  <span></span>
+  </React.Fragment>
+)
+*/

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { Header } from './components/Header';
 const name = <span>Sudeep Sawant</span>
 
 //Creating Without using jsx
@@ -18,7 +18,9 @@ const voteElegible = (age) => {
 
 function App() {
   return (
+
     <div className="App">
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -45,3 +47,20 @@ function App() {
 }
 
 export default App;
+/*
+- React lifecycle methods cannot be usind in functional component eg. componenetDidMount cannot be used in functional components
+- .js or .jsx both are valid for functional component
+- no render method used in functional coponents
+- functional component can accept and use props
+- for ui design or presentation
+eg. funcation App(){
+  return ();
+}
+
+class component:
+- make use of es6 classes and extend the component class in React
+- sometimes called 'start' or 'stateful' components as they tend to implement logic and state
+- React lifecycle methods can be used inside class component 
+- you can pass props down to class components and access them with this.props
+
+*/
