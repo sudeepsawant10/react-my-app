@@ -11,16 +11,20 @@ function FunctionClick() {
   
   // map eg
   const numbers = [3,4,5,6,7];
-  const newNumbers = numbers.map((item)=> {
-    return <li>{item}</li>;
-  });
+  // const newNumbers = numbers.map((item)=> {
+  //   return <li>{item}</li>;
+  // });
 
 
   return (
     <React.Fragment>
       <h1>React fragment h1</h1>
       <span>React fragment span</span>
-      <ur>{newNumbers}</ur>
+      <ul>
+        {
+          numbers.map((item)=> <li key={item}>{item}</li>)
+        }
+      </ul>
     </React.Fragment>
   )
 }

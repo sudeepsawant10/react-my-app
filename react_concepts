@@ -63,5 +63,14 @@ return(
 )
 
 LIST IN REACT
-- 
+- we use map() to iterate item in list it takes call back function
+- callbacks are a great way to handle something after something else has been completed
+
+MANAGE LIST DATA OBJECT USING STATE & PROPS
+- access = onsole.log(this.state.users[0].name)
+
+KEY IN REACTJS
+- key to modify, delete, retrive of item
+- list must have unique element key
+- one page will have all unique key 
 */
