@@ -8,13 +8,19 @@ function FunctionClick() {
   // return (
   //   <div><button onClick={changeEvent}>FunctionClick</button></div>
   // )
+  
+  // map eg
+  const numbers = [3,4,5,6,7];
+  const newNumbers = numbers.map((item)=> {
+    return <li>{item}</li>;
+  });
 
 
-  // Fragment example to avoid div
   return (
     <React.Fragment>
       <h1>React fragment h1</h1>
       <span>React fragment span</span>
+      <ur>{newNumbers}</ur>
     </React.Fragment>
   )
 }
