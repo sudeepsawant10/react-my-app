@@ -71,6 +71,21 @@ MANAGE LIST DATA OBJECT USING STATE & PROPS
 
 KEY IN REACTJS
 - key to modify, delete, retrive of item
-- list must have unique element key
+- list must have unique element key props
 - one page will have all unique key 
+
+STYLING & CSS 
+- Template literal for applying multiple classes.
+- we can apply css using module.css for specific task to apply css it dosen't work on any other component
+
+REACT FORM USING STATE ALONG WITH EVENT HANDLING
+- give value = this.state.elment
+
+ROUTING IN REACT
+- npm install react-router-dom
+- contains BrowserRouter import as Router
+- contains Switch, Route, Link
+1221
+
+In react-router-dom v6, "Switch" is replaced by routes "Routes". You need to update the import from
 */

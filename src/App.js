@@ -42,6 +42,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <h1 className='error'>Module css error headinng</h1>
+
     </div>
   );
 }

@@ -7,27 +7,37 @@ import ClassComponent from './components/ClassComponent';
 import { Header } from './components/Header';
 import Channel  from './components/Channel';
 import FunctionClick from './components/FunctionClick';
+import StyleSheet from './components/StyleSheet';
+import Form from './components/Form';
+import Routing from './components/Routing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-    <Header name="Anuj" last="Sharma" >
-      {/* child  */}
-      <p>Anuj is good boy</p>
-
-    </Header>
-    <Header name="Vivek" last="Verma"/>
-    <Header name="Ajay" />
-    <Header />
-
-    <ClassComponent name="rahul" last="gupta" rollNo="40"/>
-
-    {/* state eg */}
-    <Channel />
-
-    <FunctionClick />
+  
+  // <React.StrictMode>
     
+  //   <App />
+  //   <Header name="Anuj" last="Sharma" >
+  //     {/* child  */}
+  //     <p>Anuj is good boy</p>
+
+  //   </Header>
+  //   <Header name="Vivek" last="Verma"/>
+  //   <Header name="Ajay" />
+  //   <Header />
+
+  //   <ClassComponent name="rahul" last="gupta" rollNo="40"/>
+
+  //   {/* state eg */}
+  //   <Channel />
+
+  //   <FunctionClick />
+    
+  // </React.StrictMode>
+  <React.StrictMode>
+    {/* <Form /> */}
+    <Routing />
+    {/* <StyleSheet isValue = {false}/> */}
   </React.StrictMode>
 );
 
