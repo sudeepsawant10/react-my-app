@@ -15,6 +15,8 @@ import Product from './components/Product';
 import Product2 from './components/Product2';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
+import HookCounter from './components/hooks/HookCounter';
+import UseEffectCounter from './components/hooks/UseEffectCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,7 +52,9 @@ root.render(
      
     {/* <Product2 /> */}
     {/* <PostList /> */}
-    <PostForm />
+    {/* <PostForm /> */}
+    {/* <HookCounter /> */}
+    <UseEffectCounter />
   </React.StrictMode>
 );
 
