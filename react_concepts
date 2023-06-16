@@ -125,5 +125,17 @@ HTTP GET REQUEST - FETCH DATA FROM REST API
 MAP FUNCTION array map
 POST REQUEST
 
+REACT HOOKS:
+- hooks are introduce in react 16.8 version
+- you need hooks to use any thing from class component into functional component
+- hooks are functions that lety you "hook into" React state and lifecycle features from function components.
+- Hooks allow you to use React without classes. It menns you can use State and other react features without writing a class
+- React provides a few built-in Hooks like useState, useEffect etc
 
+useState HOOK:
+- takes const variable and function
+
+useEffect 
+- it will call when component is rendered or upated
+- takes call back and const variable (optional on which useeffect will work)
 */ 
