@@ -13,6 +13,8 @@ import Routing from './components/Routing';
 import LifeCycleA from './components/LifeCycleA';
 import Product from './components/Product';
 import Product2 from './components/Product2';
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -46,9 +48,18 @@ root.render(
      <StyleSheet isValue = {false}/> 
     */}
      
-    <Product2 />
+    {/* <Product2 /> */}
+    {/* <PostList /> */}
+    <PostForm />
   </React.StrictMode>
 );
+
+// ReactDOM.render(
+//   <>
+//   <PostList />
+//   </>,
+//   document.getElementById('root')
+// )
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

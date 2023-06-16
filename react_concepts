@@ -116,4 +116,14 @@ HTTP GET REQUEST - Fetch data from REST API
 getDerivedStateFromProps 
 - It is used both in mounting and updating
 - It gets called when state is changing because of props
+
+HTTP GET REQUEST - FETCH DATA FROM REST API
+- AXIOS LIABRARY=> npm i axios
+- jsonplaceholder = (fake rest api)
+- To call any webservice, api make use of componentDidMount
+
+MAP FUNCTION array map
+POST REQUEST
+
+
 */ 
