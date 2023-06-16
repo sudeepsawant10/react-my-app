@@ -8,6 +8,14 @@ eg. funcation App(){
   return ();
 }
 
+PS D:\Sudeep\reactjs\react-my-app> node --version
+v18.16.0
+PS D:\Sudeep\reactjs\react-my-app> npm --version
+9.5.1
+PS D:\Sudeep\reactjs\react-my-app> npx --version
+9.5.1
+PS D:\Sudeep\reactjs\react-my-app> react --version
+
 class component:
 - make use of es6 classes and extend the component class in React
 - sometimes called 'start' or 'stateful' components as they tend to implement logic and state
@@ -88,4 +96,24 @@ ROUTING IN REACT
 1221
 
 In react-router-dom v6, "Switch" is replaced by routes "Routes". You need to update the import from
-*/
+
+REACT LIFE-CYCLE METHODS
+- applies on class component
+- call this method whent there is need
+phases=> Mounting, Updating, Unmounting
+html is created in first virtual dom then it will effect on actual dom the whole process is called Mounting
+changes on the html using state props is called Updating
+Deleting the html created in actual dom is called unmounting
+
+Mounting Methods
+- getDerivedStateFromProps => Static methods returns something => Get called Before rendering
+- componentDidMount => Get called After rendering (called at last)
+
+Updating Methods
+- componentDidUpdate => gets called on update of element on dom
+
+HTTP GET REQUEST - Fetch data from REST API
+getDerivedStateFromProps 
+- It is used both in mounting and updating
+- It gets called when state is changing because of props
+*/ 

@@ -10,6 +10,9 @@ import FunctionClick from './components/FunctionClick';
 import StyleSheet from './components/StyleSheet';
 import Form from './components/Form';
 import Routing from './components/Routing';
+import LifeCycleA from './components/LifeCycleA';
+import Product from './components/Product';
+import Product2 from './components/Product2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -35,9 +38,15 @@ root.render(
     
   // </React.StrictMode>
   <React.StrictMode>
-    {/* <Form /> */}
-    <Routing />
-    {/* <StyleSheet isValue = {false}/> */}
+    {/*
+      <Form /> 
+     <Routing /> 
+     <LifeCycleA /> 
+      <Product />
+     <StyleSheet isValue = {false}/> 
+    */}
+     
+    <Product2 />
   </React.StrictMode>
 );
 
