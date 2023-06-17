@@ -138,4 +138,12 @@ useState HOOK:
 useEffect 
 - it will call when component is rendered or upated
 - takes call back and const variable (optional on which useeffect will work)
+
+useState with Previous State
+- does state value updates in loop?
+- Reataining previous state value
+
+useState with Object
+- not merging
+- solution use spread operator 
 */ 
