@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 function HookArray() {
     const [items, setItem] = useState([]);
+    // const [items, setItem] = useState([{id:1,value:1},{id:2,value:5}]);
 
     const addItem = ()=>{
         console.log("add item call")

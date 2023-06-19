@@ -111,6 +111,7 @@ Mounting Methods
 
 Updating Methods
 - componentDidUpdate => gets called on update of element on dom
+- takes prevProps, prevState
 
 HTTP GET REQUEST - Fetch data from REST API
 getDerivedStateFromProps 
@@ -146,4 +147,15 @@ useState with Previous State
 useState with Object
 - not merging
 - solution use spread operator 
+
+REACT CONTEXT API
+- To pass the props 
+- context provide a way to pass the data to the component tree without having to pass props down manually at every level.
+
+here A is provider and B & C are consumer
+A->B->C
+
+Higher-Order Components:
+- receives existing function as a parameter and returns with extra functionality
+
 */ 

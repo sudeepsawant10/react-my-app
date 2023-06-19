@@ -19,6 +19,7 @@ import HookCounter from './components/hooks/HookCounter';
 import UseEffectCounter from './components/hooks/UseEffectCounter';
 import HookObject from './components/hooks/HookObject';
 import HookArray from './components/hooks/HookArray';
+import A from './components/context_api/A';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -58,7 +59,8 @@ root.render(
     {/* <HookCounter /> */}
     {/* <UseEffectCounter /> */}
     {/* <HookObject /> */}
-    <HookArray />
+    {/* <HookArray /> */}
+    {/* <A /> */}
   </React.StrictMode>
 );
 
