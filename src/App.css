@@ -40,3 +40,9 @@
     transform: rotate(360deg);
   }
 }
+
+.error {
+  position: absolute;
+  color:red;
+  font-size: 6rem;
+}

@@ -1,12 +1,319 @@
-/*
+React js
+
+1. Single Page Application
+
+- doesn't required page reload
+- one html page that you visit which then loads all other content using javascript.
+- Updates ui without refreshing page
+  eg. gmail, facebook, instagram, Trello
+
+2. Mutli Page Application
+
+- works in traditional way
+- Whenever a user navigates from one page to another, a request is sent to the server to send a new HTML file for the URL. The server returns a file and then HTML file is loaded in the browser.
+  eg. Dribble, Hardvard's website
+
+- Measurely react is designed to developed SPA.
+
+Project Structure:
+node_modules:
+
+- containes all the dependencies install by react
+  public:
+  index.html (for single page)
+  faviccon.ico
+  manifest.json
+- contains details for application
+  package-lock.json file:
+- contains details of dependencies which are installed
+  package.json
+- Contains more details of our application (product, development support)
+
+dir src:
+index.js
+
+- it mounds our entire application.
+
+app.js (app component):
+
+- contains function inside that we can write code like html
+
+Creat first react app:
+create-react-app tool
+
+- The create-react-app toll installs all the liabraries and packages required to build a react application.
+- It creats a default configuration for our react project. It also adds some starter files in the newly created application.
+
+What is npm and npx?
+
+1. npm
+
+- It is the node package manager for javascript. It helps you manage all the 3rd party packages and liabraries that you will be installing for your application.
+  It is installed automatically when you install NodeJs
+
+2. npx
+
+- It is a node package runner. It is used to download and run a package temporarily.
+
+Commands:
+npx create-react-app my-app
+
+Inside that directory, you can run several commands:
+
+npm start
+Starts the development server and loads the application.
+
+npm run build
+Bundles the app into static files for production.
+
+npm test
+Starts the test runner.
+
+npm run eject
+Removes this tool and copies build dependencies, configuration files
+and scripts into the app directory. If you do this, you can’t go back!
+
+--------------- Jsx
+syntax extenstion to java scripts.
+
+- It allows us to define react elements using syntax that looks very similar to HTML.
+  It is used to define the look of the UI. In other words, it is used to define the Structure of React components.
+
+JSX TO JS code conversion: (babel.io)
+
+jsx code:
+
+<div>
+	
+</div>
+
+js code:
+React.createElement("div", null);
+
+<div className="myclass">Hello</div>
+React.createElement("div",{
+	className:"myclass",
+	id:"myId"
+}, "hello");
+
+HTML VS Jsx
+
+- Unlike HTML, Jsx couples the rendering logic with other UI logic such as event handling, state changing, data displaying, etc..
+
+eg. In curly braces you can write js.
+
+const imageDesc = "This is a beautiful mountain";
+
+<div>
+	<p>{imageDesc}</p>
+</div>
+
+--------------------------------- Component ----------------------------
+What is component?
+
+- component lets you split the ui into independent, reusable pieces.
+- A component is a js class or function that optionally accepts some data and returns a react element that describes how a section of the UI should appear.
+  There are 2 types of components:
+
+1. functional components
+2. Class-based components
+
+function based eg. BlogCard.js
+
+- we need to convert jsx code to create element which uses react model
+  for that import this:
+  import React from 'react';
+
+const BlogCard = () => {
+return (
+
+<div> Blog Name </div>
+)
+
+}
+
+//To import in other file
+export default BlogCard;
+
+Importing in App.js
+
+import BlogCard from './BlogCard';
+
+const blogCards = blogArr.map((item,pos)=>{
+return (
+//Jsx tag (self closing tag)
+<BlogCard key={pos}/>
+)
+})
+
+Modules Exports:
+There are two ways we can export a module:
+
+1. Default Export
+
+- It is used when we want to export only one module from a file.
+
+2. Named Export
+
+- It is used when we want to export multiple modules from the same file.
+
+Styling React Elements:
+
+1. Inline
+2. External
+
+style attribute for Inline
+
+- In html it expects a string
+- but in jsx it expects a object
+
+"Key" property:
+
+- key help React identify which items have changed, or are added or are removed fromt he dynamically generated list items.
+  Now two things to remember here:
+- A key should uniquely identify a list item among its siblings.
+- A key should be given to the outer most elements which is being rendered inside the list.
+
+Stateful vs Stateless Component:
+
+- stateful (means component with some functinality)
+  state is alos an object and it can hold any type of value
+  State functinality is provided by react component class.
+  (inherited by Component)
+
+1. Stateful component:
+
+- These are also known as class-based or contaner or smart components.
+- These have a state object.
+- These keep a track of changing data via state object.
+
+2. Stateless component:
+
+- These are also knonw as functional-based or presentational or dumb componenet.
+- These do not have a state object.
+- These print out what is given to them via props or they always render the same thing.
+
+(states of componenet should be minimum as possible to avoid lot of complexity)
+
+Purpose of UseState hook:
+
+- let you use state and other react features without writing a class.
+- A hook is a special funtion that lets you hook into react features
+- hook is lets you add react state into functional component
+
+When to use?
+
+-
+
+Array distructuring:
+Two new variables
+employees = first value return by the state
+setEmployees = the second
+const [employees, setEmployees]
+first item is the employee data (state of the employees data is maintain in this item)
+second item is a functional reference and it is used wherever we need to change the state of array stored in the first item
+
+- useState returns the pair of values i.e. the current state and the function that updates it
+
+Dipesh malvia reactjs:
+
+- useState, useEffect
+- props, state
+- components=> lifecycle, methods
+- Conditional Rendering
+- List & Keys
+- Basic Form Handling
+- React Project Structure
+- Routing React Router
+- Programmatic Navigation
+- Set-up JSON Server
+- API Calls (Axios)
+- React CRUD Operations
+- React Search Filter
+- React Hooks
+
+Development Environment on localhost port 3000
+Semantic-ui liabrary for css design cdnjs.com
+
+Component=Piece of resuable code
+You cannot use html in js directly but we can do using react liabrary
+
+return(
+//To return more than one div elements use this () paranthesis
+//self closing
+<Component />
+//To pass data
+<Component>Content</Component>
+)
+
+For class component you have to return inside of render method
+class ComponentName extend React.Component{
+render() {
+return ()
+}
+}
+
+Redenring List in React:
+array of json object
+Props= Pass data from partent to child
+
+useState hook :
+
+- for using state in functional component
+
+State is used in class component
+eg.
+state = {
+name: "",
+email: "",
+}
+
+e.preventDefault()=> For doing operation without refreshing the page load
+
+Function as PROP:
+
+- To pass a data from the parent to child
+
+To update the state using setContacts
+rest (takes all the previous states in the contact) and add new contact into it
+([...contacts, contact])
+
+useEffect()
+
+- To percist data
+- To use localstorage
+- when the value changes then rerender the component again.
+
+Package to generate unique id:
+npm i uuidv4
+
+Technical Suneja Reactjs Notes:
+
+create app using npm:
+npm install -g create-react-app
+create-react-app reactproject
+
+tut4: Folder Structure:
+package.json => information about package
+
+index.js => Execution starts running from here
+
+- renders react componenet on html document
+
+tut5: Jsx:
+
+- simple way
+
+/\*
+
 - React lifecycle methods cannot be used in functional component eg. componenetDidMount cannot be used in functional components
 - .js or .jsx both are valid for functional component
 - no render method used in functional coponents
 - functional component can accept and use props
 - for ui design or presentation
-eg. funcation App(){
+  eg. funcation App(){
   return ();
-}
+  }
 
 PS D:\Sudeep\reactjs\react-my-app> node --version
 v18.16.0
@@ -17,53 +324,63 @@ PS D:\Sudeep\reactjs\react-my-app> npx --version
 PS D:\Sudeep\reactjs\react-my-app> react --version
 
 class component:
+
 - make use of es6 classes and extend the component class in React
 - sometimes called 'start' or 'stateful' components as they tend to implement logic and state
-- React lifecycle methods can be used inside class component 
+- React lifecycle methods can be used inside class component
 - you can pass props down to class components and access them with this.props
-we cannot import class component like this
-import { Header } from './components/Header';
+  we cannot import class component like this
+  import { Header } from './components/Header';
 
 Hooks are js functions, but they impose two additional rules:
+
 1. only call Hooks at the top level.
+
 - Don't call Hooks inside loops, conditions or nested functions
 
 2. Only call Hooks from React function components.
-  - Don't call Hooks from regular js functions.
+
+- Don't call Hooks from regular js functions.
   (There is just one other valid place to call Hooks - Your own custom Hoooksl)
 
 PROPS:
+
 - to send the values to components from component calling tag
 - we cannot change the value of props in component once it is set
 - Don't need to receive props in class component(we use this.props)
 - props are immutable
 
 STATE:
+
 - state is managed with in the component
 - State can be changed
 - UseState Hook -> Functional component
 - this.state -> class component
 
 Event Handling - Pranthesis:
+
 - while defining onClick function it should be function not a function call using paranthesis
 - if we do so it will call function before the event
 
 - cannot access this in function present in function component
 
 HANDLING THIS AND BIND:
+
 - we cannot use function keyword in class component
 - if we use arrow function we don't need to bind this we can use it automatically
 
 END OF EVENT HANDLING - PREVENT DEFAULT BEHAVIOR
+
 - accessing props in state in class component
 - when passing props to class component you have to receive it using constructor and call super(props)
 
 FRAGMENT IN REACT
+
 - takes jsx wrap in single element
 - why fragment = to avoid unnecessary div tag
 - fragment is used to group multiple element without using div
 return(
-  <React.Fragment>
+<React.Fragment>
   <h1></h1>
   <div></div>
   <span></span>
@@ -71,54 +388,65 @@ return(
 )
 
 LIST IN REACT
+
 - we use map() to iterate item in list it takes call back function
 - callbacks are a great way to handle something after something else has been completed
 
 MANAGE LIST DATA OBJECT USING STATE & PROPS
+
 - access = onsole.log(this.state.users[0].name)
 
 KEY IN REACTJS
+
 - key to modify, delete, retrive of item
 - list must have unique element key props
-- one page will have all unique key 
+- one page will have all unique key
 
-STYLING & CSS 
+STYLING & CSS
+
 - Template literal for applying multiple classes.
 - we can apply css using module.css for specific task to apply css it dosen't work on any other component
 
 REACT FORM USING STATE ALONG WITH EVENT HANDLING
+
 - give value = this.state.elment
 
 ROUTING IN REACT
+
 - npm install react-router-dom
 - contains BrowserRouter import as Router
 - contains Switch, Route, Link
-1221
+  1221
 
 In react-router-dom v6, "Switch" is replaced by routes "Routes". You need to update the import from
 
 REACT LIFE-CYCLE METHODS
+
 - applies on class component
 - call this method whent there is need
-phases=> Mounting, Updating, Unmounting
-html is created in first virtual dom then it will effect on actual dom the whole process is called Mounting
-changes on the html using state props is called Updating
-Deleting the html created in actual dom is called unmounting
+  phases=> Mounting, Updating, Unmounting
+  html is created in first virtual dom then it will effect on actual dom the whole process is called Mounting
+  changes on the html using state props is called Updating
+  Deleting the html created in actual dom is called unmounting
 
 Mounting Methods
+
 - getDerivedStateFromProps => Static methods returns something => Get called Before rendering
 - componentDidMount => Get called After rendering (called at last)
 
 Updating Methods
+
 - componentDidUpdate => gets called on update of element on dom
 - takes prevProps, prevState
 
 HTTP GET REQUEST - Fetch data from REST API
-getDerivedStateFromProps 
+getDerivedStateFromProps
+
 - It is used both in mounting and updating
 - It gets called when state is changing because of props
 
 HTTP GET REQUEST - FETCH DATA FROM REST API
+
 - AXIOS LIABRARY=> npm i axios
 - jsonplaceholder = (fake rest api)
 - To call any webservice, api make use of componentDidMount
@@ -127,6 +455,9 @@ MAP FUNCTION array map
 POST REQUEST
 
 REACT HOOKS:
+
+- Hooks are special functions that are only available while React is rendering
+
 - hooks are introduce in react 16.8 version
 - you need hooks to use any thing from class component into functional component
 - hooks are functions that lety you "hook into" React state and lifecycle features from function components.
@@ -134,28 +465,250 @@ REACT HOOKS:
 - React provides a few built-in Hooks like useState, useEffect etc
 
 useState HOOK:
+why introduced?
+
+1. Local variables don’t persist between renders. When React renders this component a second time, it renders it from scratch—it doesn’t consider any changes to the local variables.
+2. Changes to local variables won’t trigger renders. React doesn’t realize it needs to render the component again with the new data.
+
 - takes const variable and function
 
-useEffect 
-- it will call when component is rendered or upated
+useEffect
+
+- it will call when component is rendered or updated
 - takes call back and const variable (optional on which useeffect will work)
+- if we don't give any dependency not even empty so it will run every time when page is rendered and when component gets updated
+- to avoid this give empty dependency to run it only once or give a dependent state
 
 useState with Previous State
+
 - does state value updates in loop?
 - Reataining previous state value
 
 useState with Object
+
 - not merging
-- solution use spread operator 
+- solution use spread operator
+
+useRef
+
+- used in the forms
+- we don't have to create function of every component event
+- we give const useRef variable to every component
+
+useReducer:
+
+- To overcame the problem of useState
+- takes direct functional call instead of setvariable function and intialState variable
 
 REACT CONTEXT API
-- To pass the props 
+
+- To pass the props
 - context provide a way to pass the data to the component tree without having to pass props down manually at every level.
 
 here A is provider and B & C are consumer
 A->B->C
 
 Higher-Order Components:
+
 - receives existing function as a parameter and returns with extra functionality
 
-*/ 
+Formik and Yup Library:
+Formik = To create form (most popular library for react and react native)
+Yup = for validation
+installation command:
+npm i yup
+npm i formik
+
+podcasts:
+Software engineering
+
+- don't have specialist in industry
+- High demand for specialist
+- Give a time to upskill yourself and get industry experience
+-
+
+React:
+
+- Angluar js not having backward compatibility performance issues
+- Overcame the problem of angular
+- GraphQl for mobile webapp
+- Unidirectional data flow
+- Reusable component
+- problem=> where to keep css, html, js (choices)
+- vue.js = by evan you (Structured ) => not mix of html and js reduced jsx
+- lots of supporting liabraries
+- react native for mobile apps
+- redux simplified version of flux
+- functional problem => for lots of data
+
+Roadmap: (Advance react developer)
+By creating the things
+
+1. Advance state management:
+
+- useState, useReducer, useContext
+- MObx, Redux,
+- async operation=> Redux Thunk / Redux saga (middleware)
+- selectors, memoize-one, reselect (why need? and How?)
+
+2. Routing and Nevigation
+
+- Nested Routes, Routing Guards, Transition, Animation
+
+3. Authentication and Autherization
+
+- JWT, OAuth implementation
+
+4. Internationalization & Localization
+
+- Multiple language support => I18N next
+
+5. Performance optimization
+
+- Lazy loading, Code-spliting implementation
+- ssr, ssg uses, bundle size, cache request, caching
+
+6. Testing & Automation
+
+- unit, integration, E2E Testing
+- CI/CD pipeline
+  Qulity code development, maintain and deployment
+
+7. Error handling and login
+
+- Alerts, logs, => Sentry, Bugsnag (message on error to developer)(Feedback from customer/user)
+
+8. Progressive Web Application
+
+- PWA app, caching , offline access, notification
+
+Data Visualization, Error boundaries, Accessibility
+
+Clean code in Reactjs
+
+1. Impure ways to update obj and array (mistake)
+
+- pure functions like concate(), map()
+
+2. React.Fragment not using
+
+- returns inclusive div
+
+3. use keys for rendering arrays (id not always array index)(for better reconsillation)
+
+4. Use functional component
+5. Make hooks based component
+6. Make small reusable component (Helps in readability)
+7. use useReducer when using (more than 3 useStates in same component)
+8. follow folder structure
+   9 use Array destrucuring
+   10 use error boundaries (Handle Exceptions)
+   11 Integrate Typescript (for less bugs)
+
+JAVASCRIPT 10 INTERVIEW QUESTIONS:
+
+1. Set Time Out Zero:
+
+- Understanding of Event Loop is important in js with setTimeOut (micro task)
+- Talk not only output but also why and how it is coming
+
+2. Placement of js Files:
+
+- Where do keep js file (in body or head)
+- aync or difer
+- Critical Rendering Path (Which changes are blocking or non blocking after rendering page by brower)
+  that'why we have to keep html, css and js seperately.
+
+3. difference between let, const and var:
+
+- Interviews wants to know about do you know block scoping
+- Block scoping introduced in es6 (TDZ)
+
+4. Closure
+
+- Explain program, example and output
+- Everyday usage (Understand it properly in debugging)
+
+5. Functional Programming
+
+- Pure functions, Map, Filter, Reduce, Compose, Curring (usage, explination)
+- Your own polyfill (Higher order function)
+
+6. this keyword
+
+- Call Bind Apply (Implementation)
+- arrow functions, window
+
+7. Frameworks
+
+- Which framework will you choose and why, when
+- SSR, SSG, SPA
+- Vdom, Reconciliation
+
+8. Prototypical Inheritance
+
+- In class implementation (Multilevel)
+
+9. Promises, Aync Await, CallBack
+
+- Difference, Working
+- Parallel request, Sub sequential request
+- Callback exit, Own Promise Implementation
+- State management (coding, and output)
+
+10. Debounce vs Throttle
+
+- type input (Server load)
+- User behaviour (Your own version)
+
+Machine Coding Round
+
+- laptop and internet access (and Develop app in 1 to 2 hr) or 8hr
+  Two types of question:
+  React Profisiancy,Question startup
+  Questoin (write in venila js) =>faang
+
+1. Infinite Scroll Implentation using api call
+
+- Ui loader, state mangement, data view, filter, sort
+- performance optimisation
+
+2. Calender App
+
+- Metting, Ui interactions (Cell based)
+
+3. Make Excel (senior level)
+4. Email App
+
+- drafts, sent, delete, mark important
+- Routing, State management
+
+5. Tab implementation
+6. Retrive Data from API (Artifacia company)
+
+- Data model of frontend for diff features
+
+7. Drag & Drop API of js
+
+CSS:
+
+1. Carousel (Aspect Ratio)
+2. ...
+
+------------------- MERN STACK DEVELOPMENT:
+MongoDB => Database
+Express => Server
+React => Frontend (state, context, reduce, routers)
+Node => Runtime
+why?
+
+- Good career, community, growth
+- Good Projects (Proof of work)
+  3 to 5LPA
+
+client side (API, Authentication, )
+server side ()
+
+roc8.com (job portal)
+
+\*/
